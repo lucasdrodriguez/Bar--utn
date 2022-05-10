@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Ejemplo_01.Logica.Bebida">
+    <Position X="6" Y="4" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAQAAA=</HashCode>
+      <FileName>Logica\Bebida.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ejemplo_01.Logica.Cliente">
+    <Position X="10" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAEAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Logica\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ejemplo_01.Logica.Comida">
+    <Position X="0.5" Y="7" Width="6" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAA=</HashCode>
+      <FileName>Logica\Comida.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ejemplo_01.Logica.Cuenta">
+    <Position X="13.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAIQAAAAAAAAAAAAAAAAAAAAAAAAAQAAAACAE=</HashCode>
+      <FileName>Logica\Cuenta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ejemplo_01.Logica.Mesa">
+    <Position X="19.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAACAAAAAgAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Logica\Mesa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ejemplo_01.Logica.Negocio">
+    <Position X="17.75" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAQAAAAAACAAAAAAAAAAAAAAIBAAAABA=</HashCode>
+      <FileName>Logica\Negocio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ejemplo_01.Logica.Pedido">
+    <Position X="6.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logica\Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ejemplo_01.Logica.Producto">
+    <Position X="0.5" Y="0.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AhEAAAAAAgAgAACAAAAAAAAQAAAAEABAAAEAAAAAAiA=</HashCode>
+      <FileName>Logica\Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ejemplo_01.Logica.Usuario">
+    <Position X="18" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAEAACAEAAAgAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logica\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Ejemplo_01.Logica.EVersionBebida">
+    <Position X="14.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAgAAAAAAAAAAAAAACAAAAAAAAAAAAAgIAAA=</HashCode>
+      <FileName>Logica\Bebida.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ejemplo_01.Logica.EIngredientes">
+    <Position X="13" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAABgACBAQAQAAEAAAAAAAAAAAABAAAABA=</HashCode>
+      <FileName>Logica\Comida.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ejemplo_01.Logica.ERol">
+    <Position X="14.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logica\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

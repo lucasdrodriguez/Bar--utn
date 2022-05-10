@@ -21,12 +21,12 @@ namespace Ejemplo_01.Logica
         EVersionBebida formato;
 
 
-        public Bebida(string nombre, int cantidadDisponible, float precio, bool tieneAlcohol, EVersionBebida formato)
-            : base(nombre, cantidadDisponible, precio)
+        public Bebida(string nombre, int cantDisp, float precio, bool conAlcohol, EVersionBebida formato)
+            : base(nombre, cantDisp, precio)
         {
 
             this.formato = formato;
-            this.tieneAlcohol = tieneAlcohol;
+            this.tieneAlcohol = conAlcohol;
 
         }
 

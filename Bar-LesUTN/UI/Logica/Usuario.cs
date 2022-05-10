@@ -14,11 +14,13 @@ namespace Ejemplo_01.Logica
     {
         int idUsuario;
         string nombre;
+        string password;
         ERol rol;
 
-        public Usuario(int dni, string nombre, ERol rol)
+        public Usuario(int dni, string nombre,string password, ERol rol)
         {
             this.idUsuario = dni;
+            this.password= password;
             this.nombre = nombre;
             this.rol = rol;
         }
@@ -37,6 +39,10 @@ namespace Ejemplo_01.Logica
             get { return rol; }
         }
 
+        public bool ComprobarPassword(string datoIngresado)
+        {
+            return (!string.IsNullOrEmpty(datoIngresado) && datoIngresado.Trim() == password.Trim());
+        }
       
 
     }

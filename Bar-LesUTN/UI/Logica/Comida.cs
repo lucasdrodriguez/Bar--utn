@@ -25,9 +25,9 @@ namespace Ejemplo_01.Logica
 
         List<EIngredientes> ingredientes;
 
-        public Comida(string nombre, int cantidadDisponible, float precio, List<EIngredientes> ingredientes) : base(nombre, cantidadDisponible, precio)
+        public Comida(string nombre, int cantDisp, float precio, List<EIngredientes> ingred) : base(nombre, cantDisp, precio)
         {
-            this.ingredientes = ingredientes;
+            this.ingredientes = ingred;
 
         }
 

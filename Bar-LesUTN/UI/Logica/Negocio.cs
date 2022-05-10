@@ -46,8 +46,8 @@ namespace Ejemplo_01.Logica
         {
             listaUsuarios = new List<Usuario>()
             {
-                new Usuario(33112312,"Pepe Peposo",ERol.User),
-                new Usuario(25097323,"Juana RoyalCanin",ERol.Admin),
+                new Usuario(33112312,"Pepe Peposo","ruf123",ERol.User),
+                new Usuario(25097323,"Juana RoyalCanin","MadeINLanus",ERol.Admin),
 
             };
 
@@ -57,21 +57,28 @@ namespace Ejemplo_01.Logica
         {
             inventario = new List<Producto>()
             {
-              new Bebida(nombre:"Coca Cola",cantidadDisponible:95,precio: 450,tieneAlcohol: false,formato: EVersionBebida.BotellaDosLitros),
-              new Bebida(nombre:"Coca Cola",cantidadDisponible:101,precio: 350,tieneAlcohol: false,formato: EVersionBebida.BotellaLitro),
-              new Bebida(nombre:"Brahma",cantidadDisponible:500,precio: 270,tieneAlcohol: true,formato: EVersionBebida.LataGrande),
-              new Bebida(nombre:"Andes",cantidadDisponible:10,precio: 340,tieneAlcohol: true,formato: EVersionBebida.BotellaLitro),
+              new Bebida(nombre:"Coca Cola",cantDisp:95,precio: 450,conAlcohol: false,formato: EVersionBebida.BotellaDosLitros),
+              new Bebida(nombre:"Coca Cola",cantDisp:101,precio: 350,conAlcohol: false,formato: EVersionBebida.BotellaLitro),
+              new Bebida(nombre:"Brahma",cantDisp:500,precio: 270,conAlcohol: true,formato: EVersionBebida.LataGrande),
+              new Bebida(nombre:"Andes",cantDisp:10,precio: 340,conAlcohol: true,formato: EVersionBebida.BotellaLitro),
 
-              new Comida(nombre:"Hambur Completa",cantidadDisponible:20,precio:600,new List<EIngredientes>(){ EIngredientes.CarneRoja,EIngredientes.Lechuga,EIngredientes.Queso,EIngredientes.Tomate}),
-              new Comida(nombre:"Hambur Suprema",cantidadDisponible:21,precio:580,new List<EIngredientes>(){ EIngredientes.Pollo,EIngredientes.Lechuga,EIngredientes.Queso,EIngredientes.Tomate}),
-              new Comida(nombre:"Entradadita",cantidadDisponible:200,precio:300,new List<EIngredientes>(){ EIngredientes.Aceitunas,EIngredientes.Queso,EIngredientes.Papas,EIngredientes.Salchicha})
+              new Comida(nombre:"Hambur Completa",cantDisp:20,precio:600,new List<EIngredientes>(){ EIngredientes.CarneRoja,EIngredientes.Lechuga,EIngredientes.Queso,EIngredientes.Tomate}),
+              new Comida(nombre:"Hambur Suprema",cantDisp:21,precio:580,new List<EIngredientes>(){ EIngredientes.Pollo,EIngredientes.Lechuga,EIngredientes.Queso,EIngredientes.Tomate}),
+              new Comida(nombre:"Entradadita",cantDisp:200,precio:300,new List<EIngredientes>(){ EIngredientes.Aceitunas,EIngredientes.Queso,EIngredientes.Papas,EIngredientes.Salchicha})
             };
 
         }
 
 
-
-
+        public static Usuario LoguearUsuario(int idUser,string password)
+        {
+            foreach (Usuario item in listaUsuarios)
+            {
+                if (item.Dni == idUser && item.ComprobarPassword(password))
+                    return item;
+            }
+            return null;
+        }
 
 
 
