@@ -19,8 +19,6 @@ namespace Ejemplo_01.Logica
             this.cuenta = new Cuenta();
         }
 
-
-
-
+        public string Nombre { get => nombre; }
     }
 }

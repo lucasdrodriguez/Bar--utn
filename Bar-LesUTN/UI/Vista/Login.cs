@@ -20,18 +20,24 @@ namespace Ejemplo_01.Vista
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(txt_usuario.Text, out int id))
+          
+            if (string.IsNullOrEmpty(txt_usuario.Text) || string.IsNullOrEmpty(txt_pass.Text))
+                MessageBox.Show("Ingrese datos validos");
+            else
             {
-                Usuario userLogueado = Negocio.LoguearUsuario(id, txt_pass.Text);
-                
-                if(userLogueado is not null)
+                if (int.TryParse(txt_usuario.Text, out int id))
                 {
-                    MenuPrincipal mp = new MenuPrincipal(userLogueado);
-                    mp.Show();
-                    this.Hide();
-                }
+                    Usuario userLogueado = Negocio.LoguearUsuario(id, txt_pass.Text);
 
+                    if (userLogueado is not null)
+                    {
+                        MenuPrincipal mp = new MenuPrincipal(userLogueado);
+                        mp.Show();
+                        this.Hide();
+                    }
+                }
             }
+
         }
 
         private void btn_empleado_Click(object sender, EventArgs e)
@@ -44,6 +50,20 @@ namespace Ejemplo_01.Vista
         {
             this.txt_usuario.Text = "25097323";
             this.txt_pass.Text = "MadeINLanus";
+
+            this.comboBox1.DataSource = null;
+            this.comboBox1.DataSource = new List<string>() { "pepe", "juan","margin" };
+
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.comboBox1.DataSource = new List<string>() { "pepe", "juan" };
         }
     }
 }

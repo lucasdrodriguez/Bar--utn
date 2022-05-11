@@ -21,10 +21,24 @@ namespace Ejemplo_01.Logica
         }
         private static void InstanciarMesas()
         {
-            mesas = new Mesa[15]
+            mesas = new Mesa[20]
             {
-              new Mesa(1,null),
-              new Mesa(2,null),
+              new Mesa(1,new Cliente(numMesa: 1,
+                                     nombre: "Juan",
+                                     new Cuenta(new List<Producto>()))),
+            
+                new Mesa(2,new Cliente(2,"Margarita",
+                    new Cuenta(new List<Producto>(){
+                              new Comida(nombre:"Hambur Completa",cantDisp:20,precio:600,
+                                        new List<EIngredientes>(){EIngredientes.CarneRoja,EIngredientes.Lechuga,EIngredientes.Queso,EIngredientes.Tomate}),
+
+                              new Comida(nombre:"Entradadita",cantDisp:200,precio:300,
+                                        new List<EIngredientes>(){ EIngredientes.Aceitunas,EIngredientes.Queso,EIngredientes.Papas,EIngredientes.Salchicha}),
+                               new Bebida(nombre:"Coca Cola",cantDisp:101,precio: 350,conAlcohol: false,formato: EVersionBebida.BotellaLitro),
+                                new Bebida(nombre:"Coca Cola",cantDisp:101,precio: 350,conAlcohol: false,formato: EVersionBebida.BotellaLitro)
+                    }
+                    ))),
+
               new Mesa(3,null),
               new Mesa(4,null),
               new Mesa(5,null),
@@ -37,7 +51,12 @@ namespace Ejemplo_01.Logica
               new Mesa(12,null),
               new Mesa(13,null),
               new Mesa(14,null),
-              new Mesa(15,null)
+              new Mesa(15,null),
+              new Mesa(16,null),
+              new Mesa(17,null),
+              new Mesa(18,null),
+              new Mesa(19,new Cliente(1,"Juan",new Cuenta(new List<Producto>(){new Bebida(nombre:"Andes",cantDisp:10,precio: 340,conAlcohol: true,formato: EVersionBebida.BotellaLitro)}))),
+              new Mesa(20,null),
             };
 
 
@@ -50,8 +69,6 @@ namespace Ejemplo_01.Logica
                 new Usuario(25097323,"Juana RoyalCanin","MadeINLanus",ERol.Admin),
 
             };
-
-
         }
         private static void InstanciarProductos()
         {
@@ -69,8 +86,7 @@ namespace Ejemplo_01.Logica
 
         }
 
-
-        public static Usuario LoguearUsuario(int idUser,string password)
+        public static Usuario LoguearUsuario(int idUser, string password)
         {
             foreach (Usuario item in listaUsuarios)
             {
@@ -82,6 +98,31 @@ namespace Ejemplo_01.Logica
 
 
 
+        public static Dictionary<int, bool> EstadoMesas()
+        {
+            Dictionary<int, bool> estadoMesas = new Dictionary<int, bool>();
 
+            for (int i = 0; i < mesas.Length; i++)
+            {
+                estadoMesas.Add(i + 1, mesas[i].Cliente == null); // true si las mesas estan libres, false si estan desocupadas
+            }
+
+            return estadoMesas;
+        }
+
+        public static string MostrarInformacionMesa(int idMesa)
+        {
+            Mesa auxMesa = null;
+            foreach (Mesa item in mesas)
+            {
+                if (item.NumeroMesa == idMesa)
+                    auxMesa = item;
+            }
+
+            if (auxMesa is null)
+                return "mesa no encontrada";
+
+            return auxMesa.ToString();
+        }
     }
 }

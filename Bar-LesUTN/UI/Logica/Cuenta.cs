@@ -13,6 +13,7 @@ namespace Ejemplo_01.Logica
 
         int idCuenta; 
         List<Producto> pedido;
+        Dictionary<int, int> pedidos;
         bool cuentaCerrada;
         float costo;
 
@@ -32,6 +33,8 @@ namespace Ejemplo_01.Logica
             cuentaCerrada = true;
             idCuenta = ultimaCuenta;
             pedido = new List<Producto>();
+            pedidos = new Dictionary<int, int>();
+
         }
 
 
